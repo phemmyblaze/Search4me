@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+*, body, html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+:root{
+    --primary-color:#274690;
+    --font-family:'Lato',sans-serif;
+}
+.bg-img{
+    background-position:100% 75%;
+    background-size:contain;
+}
+
+.search-heading{
+    color:var(--primary-color);
+    font-family: var(--font-family);
+    font-weight: 700;
+
+    
+}
+.search-heading2{
+    font-family: var(--font-family);
+    font-weight: 700;
+
+    
+}
+.form-margin{
+    margin-right: 100px;
+}
+.form-email,
+.form-password{
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size:24px;
+}
+.form-button{
+    background-color: var(--primary-color);
+
+    font-family: var(--font-family);
+    border-radius:8px;
+
+}
+.forget-password{
+    font-family: var(--font-family);
+    font-weight: 400
+}
+@media(max-width: 768px) {
+    .full-width {
+        width: 100%;  
+    }
+}
+@media(max-width: 600px) {
+    .form-email,
+    .form-password{
+        font-size:12px;
+        font-weight:700;
+    }
+    .forget-password{
+        font-size:12px;
+    }
+    .search-heading{
+        font-size:20px;
+    }
+    .search-heading2{
+        font-size:20px;
+    }
+    .form-button{
+        font-size:14px;
+    }
+    .forget-password2{
+        font-size:14px;
+
+    }
+}

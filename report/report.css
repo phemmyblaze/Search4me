@@ -1,0 +1,62 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+.header-nav {
+    padding-right: 150px;
+}
+
+.Report-header{
+    background-color: #274690;
+    width: 100%;
+}
+
+
+input [type="radio"]:checked {
+    appearance: none;
+    background-color: #274690;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    padding-top: 15px;
+} 
+
+input:checked {
+    width: 20px;
+    height: 20px;
+    padding-top: 15px;
+    background-color: #274690;
+    border-radius: 50%;
+}
+
+input[type=checkbox] {
+    transform: scale(1);
+    margin: 5px;
+    cursor: pointer;
+  }
+
+.evidence{
+    background-color: #D62246;
+    opacity: 75%;
+    line-height: 1.3;
+}
+
+.btn{
+    background-color: #274690;
+}
+
+.back {
+    color:#274690 ;
+    background-color: #fdfdfd;
+}
+
+.footer-section{
+  background-color:#D6F2FF4D ;  
+}

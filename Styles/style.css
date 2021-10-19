@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,700&display=swap');
+
+*, body, html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+
+/* navigation bar */
+
+.header-nav {
+    padding-right: 150px;
+}
+
+
+/* BUTTON */
+.btn-1 {
+    background: #274690;
+}
+/*style for reportsuccessfulpage*/
+.report-case-success h1{
+    font-weight: 700;
+}
+.report-case-success h2{
+    font-weight: 400;
+    color:  #274690;
+}
+.report-case-success p{
+    font-size: 20px;
+}
+.report-case-success .btn{
+    padding: 5px  35px;
+    background-color: #274690;
+    color: white;
+    font-size: 1rem;
+}
+
+/*style for reportcaseform*/
+.report-case h1{
+    font-weight: 700;
+}
+.input-case{
+    width: 60% ;
+    height: 60px;
+    border:3px solid #274690;
+    padding: 0 60px;
+}
+.btn-case{
+background-color: #274690;
+box-shadow: 0px 4px 4px rgba(39, 70, 144, 0.25);
+border-radius: 5px;
+padding: 0 60px;
+}
+
+/* styles for term for us and privacy policy */
+.term {
+    letter-spacing: 3px;
+}
+
+.policy-section {
+    letter-spacing: 3px;
+}
+
+
+/* Footer Section*/
+
+.footer-section {
+    background: rgba(214, 242, 255, 0.3);
+}
+
+
+
+
+@media(max-width: 768px) {
+    .nav-header {
+        justify-content: center;
+    }
+}
+/*media query for reportcaseform*/
+@media(max-width:768px) {
+   
+    .input-case{
+         margin-bottom: 10px;
+         padding: 0 80px;
+         width: 50%;
+     }
+     .btn-case{
+     height: 60px;
+     padding: 10px 60px;
+     }
+ }
+ @media (max-width:426px){
+     .h6{
+         width: 100% !important;
+     }
+     .input-case{
+         width: 100%;
+     }  
+ }

@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./report/report.css">
+
+    <title>search4Me</title>
+  </head>
+  <body>
+    <header>
+      <div class="container ">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white p-3">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+              <img src="./images/logo.png" alt="" width="100" height="24">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+              <ul class="navbar-nav mb-2 mb-lg-0 header-nav">
+                <li class="nav-item">
+                  <a class="nav-link text-body" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-body" href="followuppage.html">Follow up case </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-body" href="about.html">About us </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-body" href="contact.html">Contact Us </a>
+                </li>
+              </ul>
+              <button type="button" class="btn btn-1 btn-sm text-white">Submit report</button>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <form action="" >
+
+      <div class="container m-2">
+          <div class="m-3">
+              <h1 class="">Report A New Case</h1>
+          </div>
+          <div class="container">
+              <div class=" m-2 Report-header rounded-end">
+                  <h5 class="text-white m-3 py-2 text-center">Reporter Information</h5>
+              </div>
+  
+      
+              <div class="col-12 row gap-2">
+                  <input type="text" class="col-9  border border-2 rounded-3 py-1" value="" placeholder="Surname">
+             
+                  <input type="text" class=" col-9 border border-2 rounded-3 py-1" value="" placeholder="First Name" >
+          
+                  <input type="text" class=" col-9 border border-2 rounded-3 py-1 " value="" placeholder="Middle Name">
+          
+                  <input type="email" class="col-9  border border-2 rounded-3 py-1" value="" id="email" placeholder="Email">
+             
+                  <input type="tel" id="phone" class=" col-9 border border-2 rounded-3 py-1" value="" placeholder="+234 | ">
+              </div>
+
+          </div>
+
+          <div class="container">
+              <div class="m-2 Report-header rounded-end">
+                  <h5 class="text-white m-3 py-2 text-center">Victim Information</h5>
+              </div>
+
+              <div class="col-12 row gap-2">
+
+                  <input type="text" class="col-9 border border-2 rounded-3 py-1" value="" placeholder="Surname">
+             
+                  <input type="text" class=" col-9 border border-2 rounded-3 py-1" value="" placeholder="First Name" >
+          
+                  <input type="text" class=" col-9 border border-2 rounded-3 py-1 " value="" placeholder="Middle Name">
+
+                  <input type="email" class="col-9 border border-2 rounded-3 py-1" value="" placeholder="Age">
+
+                  <div class=" mx-1 my-2 px-1">
+                      <label for="Gender" class="fw-bold">Gender:</label>
+                      <input type="radio"  class="mx-2"name="gender" value="male" checked> Male
+                      <input type="radio" class="mx-2" name="gender" value="female"> Female
+                  </div>
+
+                  <input type="text" class="col-9 border border-2 rounded-3 py-1" value="" placeholder="Occupation">
+             
+                  <input type="text" class=" col-9 border border-2 rounded-3 py-1" value="" placeholder="Address" >
+          
+                  <input type="tel" id="phone" class=" col-9 border border-2 rounded-3 py-1 " value="" placeholder="+234 |">
+
+                  <input type="text" class="col-9 border border-2 rounded-3 py-1" value="" placeholder="Last Known Location">
+
+                  <input type="date" class=" col-9 border border-2 rounded-3 py-1" value="" placeholder="Date Last Seen" >
+                  
+              </div>
+          </div>
+
+          <div class="container">
+              <div class="m-2 Report-header rounded-end">
+                  <h5 class="text-white m-3 py-2 text-center">Evidence</h5>
+              </div>
+
+              <div class="bg-danger m-2 evidence rounded-end p-2 text-white">
+                  <p>Note: You are to provide: </p>
+                  <p>* A detailed report of the case</p> 
+                  <p>* Upload any visual evidence if available.</p>
+              </div>
+
+              <div class="col-9 row  gap-2">
+                  <p class="fw-bold my-1">Report</p>
+                  <textarea name="message" id="" class=" border border-2 rounded-3 py-1" cols="30" rows="4" placeholder="Add your report here..."></textarea>
+                  <div class="d-flex flex-row gap-2 col-md-4 col-12">
+                      <p>Time: 5:00 PM </p>
+                      <p>Date: 1-06-2021</p>
+                  </div>
+              </div>
+
+              <div class="d-flex">
+                  <div class=" d-flex flex-row">
+                    <button type="button" class="btn btn btn-sm text-white mx-5">Submit report</button>
+                  </div>
+                  <div class="flex-row">
+                      <input type="file" name="filename" id="filename" class="px-2 py-1 border border-dark border-1 m-2" placeholder="Upload image/video">
+                  </div>
+                  <img src="./images/Vector (3).png" alt="" width="20px" height="20px">
+
+              </div>
+
+              <div class="d-flex justify-content-center">
+                  <div class=" d-flex flex-row">
+                      <img src="./images/Vector (4).png"  alt="" width="20px" height="20px" srcset="">
+                      <p class="d-flex flex-column">add other images(s)/Videos</p>
+                  </div>
+              </div>
+
+              <div class="d-flex justify-content-end"> 
+                  <ul class="d-flex flex-column col-12">
+                      <li>File type accepted: image (JPEG or PNG), Video (mp4) </li>
+                      <li>Max upload file size: image (3MB), Video (25MB)</li>
+                  </ul>
+              </div>
+          </div>
+
+          <div class="m-3" class="checkbox">
+              <input type="checkbox" checked>
+              <label for="" >Agree to our terms of use</label><br>
+              <input type="checkbox" checked>
+              <label for="" checked>Agree to our privacy policy</label><br>
+              <input type="checkbox" checked>
+              <label for="" style="display: inline" checked>Notify me of new Updates regarding this case.</label>
+          </div>
+
+          <div class="d-flex justify-content-end p-3"> 
+              <div class="d-flex flex-row col-md-4 col-12 gap-2">
+                  <a class="btn btn-primary fs-5" href="index.html" role="button">Back</a>
+                  <a class="btn btn-primary fs-5" href="reportcasesuccessfulpage.html" role="button">Submit</a>
+              </div>
+          </div>
+          
+      </div>  
+      
+  </form>
+
+    <footer>
+      <div class="footer-section">
+          <div class="container">
+              <div class="row d-flex justify-content-around">
+                  <div class="col-md-4 col-12 pt-5 mt-2 align-self-end">
+                    <a class="navbar-brand ps-5" href="index.html">
+                      <img src="./images/logo.png" alt="" width="120" height="24">
+                    </a>
+                  </div>
+              
+                  <div class="col-md-4 col-12 footer-links pt-4">
+                    <ul class="navbar-nav ">
+                      <li class="nav-item">
+                        <a class="nav-link text-body fw-normal" aria-current="page" href="index.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-body fw-normal" href="followuppage.html">Follow up case </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-body fw-normal" href="about.html">About us </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-body fw-normal" href="contact.html">Contact Us </a>
+                      </li>
+                    </ul>
+                  </div>
+              
+                  <div class="col-md-4 col-12 pt-4 pb-2">
+                    <h6 class="fw-normal">Follow us on</h6>
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link text-body list" href="#"><img src="./images/facebook.png" alt="" width="30" height="24"><span class="p-2 fw-normal">Facebook</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-body list" href="#"><img src="./images/twitter.png" alt="" width="30" height="24"><span class="p-2 fw-normal">Twitter</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-body" href="#"><img src="./images/instagram.png" alt="" width="30" height="24"><span class="p-2 fw-normal">Instagram</span></a>
+                      </li>
+                      
+                    </ul>
+                  </div>
+    
+                  <div class="me-md-auto text-center text-md-start ps-5">
+                      <div class="copyright text-center d-flex justify-content-center ">
+                          <a class="nav-link text-dark fw-normal" href="term.html">Terms of Use</a>
+                          <a class="nav-link text-dark fw-normal" href="policy.html">Privacy Policy</a>
+                      </div>
+                  </div>
+                  <div class="me-md-auto text-center text-md-start ps-5 pt-2 pb-4">
+                      <div class="copyright text-center fw-normal">
+                          © 2021 search4Me Lagos, Nigeria
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </footer>
+    
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
