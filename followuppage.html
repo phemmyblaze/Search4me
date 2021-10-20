@@ -45,7 +45,7 @@
     <main class="container p-4" id="followUpPage">
         <h1>Follow Up On A Case</h1>
         <div class="row">
-          <!-- <p class="case-info my-5"><span class="fw-bold">Case ID:</span> <span>ABCDZ1234</span> <span>Open</span> <img src="./images/Verified.png" /> <sub>Verified</sub></p> -->
+          <p class="case-info my-5"><span class="fw-bold">Case ID:</span> <span>ABCDZ1234</span> <span>Open</span> <img src="./images/Verified.png" /> <sub>Verified</sub></p>
           <div class="col-lg-4 col-md-5">
             <h4>Reporter Information</h4>
             <div class="reporter-info info-box p-4 m-3">
@@ -73,7 +73,6 @@
           </div>
           
             <div class="col-lg-8 col-md-7">
-              <p class="case-info my-3"><span class="fw-bold">Case ID:</span> <span>ABCDZ1234</span> <span>Open</span> <img src="./images/Verified.png" /> <sub>Verified</sub></p>
               <h4 class="m-2">Case Report:</h4>
               <div class="outer-box p-3 m-2">
                 <div class="middle-box p-3 m-2 text-center">
@@ -85,18 +84,20 @@
                 <img src="./images/person 3.png" />
                 <img src="./images/person 2.png" />
                 </div>
-                <p class="text-end mx-4 my-5 update"><span class="">Updates</span> <sup>3</sup></p>
+                <p class="text-end mx-4 my-5 update" id="update-button"><span class="">Updates</span> <sup id="update-number">3</sup></p>
                 <div id="updates"></div>
                 <div class="m-3 p-3 update-info">
                   <h5>Create Update</h5>
-                  <textarea class="w-100 p-3"  rows="4"></textarea>
+                  <textarea id="message-info" class="w-100 p-3"  rows="4" required></textarea>
                   <div class="img-upload d-flex justify-content-around align-items-center mt-3">
                     <label for="imgInp">
                       <img src="./images/ant-design_camera-outlined.png" />
                     </label>
-                    <input accept="image/*" type='file'  id="imgInp" />
-                    <div class="img-preview"></div>
-                    <button class="submit-img">Submit</button>
+                    <input accept="image/*" type='file' name="file"  id="imgInp" />
+                    <div id="img-preview-panel" class="img-preview">
+                      
+                    </div>
+                    <button id="submit-update" class="submit-img">Submit</button>
                   </div>
                 </div>
               </div>
