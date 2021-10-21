@@ -58,14 +58,29 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarText">
+            <div class="collapse navbar-collapse text-center" id="navbarText">
               <ul class="navbar-nav mx-auto mb-2 mb-lg-0 myNav">
                 <li class="nav-item">
                   <a class="nav-link active fw-bold" aria-current="page" href="#">Home</a>
                   <hr class="hr">
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link pl-5" href="followuppage.html">Follow Up Case</a>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dashboard
+                  </a>
+                  <ul class="dropdown-menu text-center" aria-labelledby="navbarDropdown2">
+                    <li><a class="dropdown-item" href="dashboardadmin.html">Dashboard (Admin)</a></li>
+                    <li><a class="dropdown-item" href="dashboardagency.html">Dashboard (Agency)</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Follow Up Case
+                  </a>
+                  <ul class="dropdown-menu text-center" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="followuppage.html">Follow Up Case (Agency)</a></li>
+                    <li><a class="dropdown-item" href="followuppagecilent.html">Follow Up Case (Client)</a></li>
+                  </ul>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link pl-5 " href="about.html">About Us</a>
@@ -74,7 +89,7 @@
                   <a class="nav-link pl-5" href="contact.html">Contact Us</a>
                 </li>
               </ul>
-              <a class="btn btn-primary" href="agencylogin.html" role="button">Submit report</a>
+              <a class="btn btn-primary" href="agencylogin.html" role="button">Login</a>
             </div>
           </div>
         </nav>
@@ -124,7 +139,7 @@
                           <div class="">
                               <div class="d-flex justify-content-center ">
                                   <div class="round d-flex justify-content-center align-items-center">
-                                      <img src="./images/report icon.png" alt="">
+                                     <img src="./images/report icon.png" alt="">
                                   </div>
                               </div> 
                              <h2 class="fw-bold">Make a Report</h2>
@@ -174,7 +189,7 @@
                   <div class="">
                       <div class="d-flex justify-content-center ">
                           <div class="round round-blue d-flex justify-content-center align-items-center">
-                             <img src="./images/verify icon.png" alt="">
+                              <img src="./images/verify icon.png" alt="">
                           </div>
                       </div> 
                       <div class="d-flex justify-content-center">
@@ -198,7 +213,7 @@
                   <div class="swapBoxContent">
                       <div class="d-flex justify-content-center ">
                           <div class="round round-blue d-flex justify-content-center align-items-center">
-                              <img src="./images/ribbon.png" alt="">
+                             <img src="./images/ribbon.png" alt="">
                           </div>
                       </div> 
                       <div class="d-flex justify-content-center">

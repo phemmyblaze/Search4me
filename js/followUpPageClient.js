@@ -20,6 +20,7 @@ let updates = [
 ]
 
 let updatesSection = document.getElementById("updates")
+const updateButton = document.getElementById("update-button");
 let html = ""
 
 // let bd= ""
@@ -75,3 +76,11 @@ function generateImageURL (images) {
 
     return generatedHTML
 }
+
+updateButton.addEventListener('click', () => {
+    if( updatesSection.style.display == "none") {
+        updatesSection.style.display = "block";
+    } else {
+        updatesSection.style.display = "none";
+    }
+})

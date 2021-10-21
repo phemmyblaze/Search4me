@@ -28,6 +28,12 @@ body{
     transition: 0.4s;
 }
 
+.nav-link, .nav-item {
+  display: inline-block;
+  color: black !important;
+  font-size:1.25rem;
+}
+
 #page-content-wrapper {
     min-width: 100vw;
   }
@@ -35,9 +41,7 @@ body{
   #wrapper{
     margin-left: 0;
   }
-.nav-link{
-    font-size:1.25rem;
-}
+
 
 
 

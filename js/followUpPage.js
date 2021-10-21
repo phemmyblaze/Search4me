@@ -1,4 +1,5 @@
 const updatesSection = document.getElementById("updates")
+const editSection = document.getElementById("edit-modal")
 const updatesNumber = document.getElementById("update-number")
 const imgUpload = document.getElementById("imgInp")
 const fReader = new FileReader();
@@ -17,19 +18,22 @@ let updates = [
         message: "Yvonne Rawlins 17, went missing from her home in Juneau area of Southeast Alaska, on 21, August. The student was last seen strolling around a park near Tongass National Forest, in Alaska, two weeks ago. A reliable source said her Sister had complained about the way her reports were treated initially.",
         images: ["../images/person 1.png", "../images/person 2.png"],
         time: "4:20 PM",
-        date: "20-06-2021"
+        date: "20-06-2021",
+        dateEdited: ''
     },
     {
         message: "Yvonne Rawlins 17, went missing from her home in Juneau area of Southeast Alaska, on 21, August. The student was last seen strolling around a park near Tongass National Forest, in Alaska, two weeks ago. A reliable source said her Sister had complained about the way her reports were treated initially.",
         images: ["../images/person 3.png"],
         time: "4:20 PM",
-        date: "20-06-2021"
+        date: "20-06-2021",
+        dateEdited: ''
     },
     {
         message: "Yvonne Rawlins 17, went missing from her home in Juneau area of Southeast Alaska, on 21, August. The student was last seen strolling around a park near Tongass National Forest, in Alaska, two weeks ago. A reliable source said her Sister had complained about the way her reports were treated initially.",
         images: [],
         time: "4:20 PM",
-        date: "20-06-2021"
+        date: "20-06-2021",
+        dateEdited: ''
     }
 ]
 
@@ -76,11 +80,12 @@ submitUpdate.addEventListener("click", () => {
     if (messageInfo.value == "") {
         alert("Update cannot be empty")
     } else {
-        let updateObject = {
+        let submitObject = {
             message: messageInfo.value,
             images: imgUploadArray,
             time: new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit', hour12: true}).toUpperCase(),
-            date: new Date().toISOString().replace(/T.*/,'').split('-').reverse().join('-')
+            date: new Date().toISOString().replace(/T.*/,'').split('-').reverse().join('-'),
+            dateEdited: ''
         }
     
         messageInfo.value = ""
@@ -88,7 +93,7 @@ submitUpdate.addEventListener("click", () => {
         imgPreviewHtml = ""
         imgPreviewPanel.innerHTML = imgPreviewHtml
     
-        updates.unshift(updateObject)
+        updates.unshift(submitObject)
         updatesNumber.textContent = updates.length
         displayHTML()
     }
@@ -137,6 +142,7 @@ function displayHTML() {
                         <p>Agency: Nigeria Police Force; Lagos State Police Command.</p>
                         <p>Time: ${e.time}</p>
                         <p>Date: ${e.date}</p>
+                        ${e.dateEdited?  `<p>Edited On ${e.dateEdited}</p>`: ``}
                 </div>
             </div>
         </div>
@@ -145,6 +151,7 @@ function displayHTML() {
     updatesSection.innerHTML = html
     updatesNumber.textContent = updates.length
     deleteButton()
+    editButton()
 }
 
 
@@ -157,6 +164,46 @@ function deleteButton() {
            displayHTML()
         })
         
+    }
+}
+
+function editButton() {
+    editHtml = ""
+    let editBtn = document.querySelectorAll('.edit')
+    for (let i = 0; i < editBtn.length; i++) {
+        editBtn[i].addEventListener('click', () => {
+            editSection.style.display = "block"
+            let editArray = updates[i]
+            editHtml += `
+                <div class="edit-update-box p-4" data-updateNo=${i}>
+                    <h5 class="mb-4">Edit Update</h5>
+                    <textarea id="edit-update-info" class="w-100 p-3"  rows="4" required></textarea>
+                    <p class="text-end mt-4"><button id="edit-update-button">Edit</button><button id="close-update-button">Close</button></p>
+                    </div>
+            `
+            editSection.innerHTML = editHtml
+            let editUpdateInfo = document.getElementById("edit-update-info")
+            let editModalButton = document.getElementById("edit-update-button")
+            let closeModalButton = document.getElementById("close-update-button")
+            
+            editModalButton.addEventListener('click', () => {
+                console.log(i)
+                updates[i].message = editUpdateInfo.value
+                updates[i].dateEdited = `${new Date().toISOString().replace(/T.*/,'').split('-').reverse().join('-')} at ${new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit', hour12: true}).toUpperCase()}`
+                editSection.style.display = "none"
+                displayHTML()
+
+            })
+
+
+            closeModalButton.addEventListener('click', () => {
+                editSection.style.display = "none"
+                displayHTML()
+            })
+
+            editUpdateInfo.value = editArray.message
+
+        })
     }
 }
 

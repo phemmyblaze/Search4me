@@ -22,7 +22,6 @@
         </button>
         
       </div>
-    </nav> 
     <nav class="navbar-light  ms-2" >
        <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
       <span class="navbar-toggler-icon"  data-bs-target="#offcanvasExample"></span>
@@ -41,12 +40,22 @@
       <div class="offcanvas-body">
         <ul class="navbar-nav d-flex flex-column mt-5 w-100">
           <li class="nav-items w-100" >
-              <a href="" class="nav-link text-dark pl-4 ">
+              <a href="index.html" class="nav-link text-dark pl-4 ">
                <span>
                    <img src="./images/dashboard icon.png" alt="" class="py-1">
                </span>
-                 <span>Dashboard</span>
+                 <span>Home</span>
               </a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dashboard
+            </a>
+            <ul class="dropdown-menu text-center" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item nav-items w-100" href="dashboardadmin.html">Dashboard (Admin)</a></li>
+              <li><a class="dropdown-item nav-items w-100" href="dashboardagency.html">Dashboard (Agency)</a></li>
+            </ul>
           </li>
 
           <li class="nav-items w-100" >
@@ -54,7 +63,7 @@
                <span>
                    <img src="./images/cases icon.png" alt="">
                </span>
-                 <span>cases</span>
+                 <span>Cases</span>
            </a>
        </li>
       </ul>
@@ -142,7 +151,7 @@
                                           </td>
                                         
                                         <td class="py-5 text-dark">CASE ID</td>
-                                        <td class="py-5 text-dark">DATE SUMITTED</td>
+                                        <td class="py-5 text-dark">DATE SUBMITTED</td>
                                         <td class="py-5 text-dark">VERIFICATION</td>
                                         <td class="py-5 text-dark">CASES STATUS</td>
                                       </tr>

@@ -10,9 +10,15 @@
 
 /* navigation bar */
 
-.header-nav {
-    padding-right: 150px;
+
+.nav-link, .nav-item {
+    display: inline-block;
+    color: black !important;
 }
+
+.btn {
+    background-color: #274690;
+  }
 
 
 /* BUTTON */
