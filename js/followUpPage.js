@@ -188,7 +188,7 @@ function editButton() {
             
             editModalButton.addEventListener('click', () => {
 
-                if(editUpdateInfo.value = "") {
+                if(editUpdateInfo.value == "") {
                     alert("Update cannot be empty")
                 } else {
                     updates[i].message = editUpdateInfo.value
