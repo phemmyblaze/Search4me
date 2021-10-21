@@ -12,6 +12,43 @@ html {
     font-size: 14px;
 }
 
+.form {
+    position: relative
+}
+
+.form .fa-search {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    
+}
+
+.form span {
+    position: absolute;
+    right: 17px;
+    top: 13px;
+    padding: 2px;
+    border-left: 1px solid #d1d5db
+}
+
+
+
+.form-input {
+    height: 55px;
+    text-indent: 33px;
+    border-radius: 10px;
+    background: rgba(239, 235, 235, 0.5);
+}
+
+.form-input:focus {
+    box-shadow: none;
+    border: none;
+}
+
+.fa-bell {
+    color: black;
+} 
+
 
 
 #followUpPage ul {
@@ -256,7 +293,7 @@ footer {
 }
 
 @media only screen and (max-width: 450px){
-	.updates-details div  {
+	.updates-details div, .search-div  {
         margin: 1px;
         width: 100%;
     }

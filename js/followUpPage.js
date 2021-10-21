@@ -16,14 +16,14 @@ let imgUploadArray = []
 let updates = [
     {
         message: "Yvonne Rawlins 17, went missing from her home in Juneau area of Southeast Alaska, on 21, August. The student was last seen strolling around a park near Tongass National Forest, in Alaska, two weeks ago. A reliable source said her Sister had complained about the way her reports were treated initially.",
-        images: ["../images/person 1.png", "../images/person 2.png"],
+        images: ["./images/person 1.png", "./images/person 2.png"],
         time: "4:20 PM",
         date: "20-06-2021",
         dateEdited: ''
     },
     {
         message: "Yvonne Rawlins 17, went missing from her home in Juneau area of Southeast Alaska, on 21, August. The student was last seen strolling around a park near Tongass National Forest, in Alaska, two weeks ago. A reliable source said her Sister had complained about the way her reports were treated initially.",
-        images: ["../images/person 3.png"],
+        images: ["./images/person 3.png"],
         time: "4:20 PM",
         date: "20-06-2021",
         dateEdited: ''
@@ -135,7 +135,7 @@ function displayHTML() {
             </div>
             <div class="row updates-details">
                 <div class="col-4 p-4">
-                    <img class="" src="../images/police logo.png"/>
+                    <img class="" src="./images/police logo.png"/>
                 </div>
                 <div class="col-8 p-4">
                         <p>Updated by Inspector Buhari Jubril</p>
@@ -187,11 +187,18 @@ function editButton() {
             let closeModalButton = document.getElementById("close-update-button")
             
             editModalButton.addEventListener('click', () => {
-                console.log(i)
-                updates[i].message = editUpdateInfo.value
+
+                if(editUpdateInfo.value = "") {
+                    alert("Update cannot be empty")
+                } else {
+                    updates[i].message = editUpdateInfo.value
                 updates[i].dateEdited = `${new Date().toISOString().replace(/T.*/,'').split('-').reverse().join('-')} at ${new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit', hour12: true}).toUpperCase()}`
                 editSection.style.display = "none"
                 displayHTML()
+                }
+
+
+                
 
             })
 
