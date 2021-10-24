@@ -7,6 +7,14 @@ body {
   color: black !important;
 }
 
+.navbar-brand {
+  flex: 0.8;
+}
+
+.navbar-collapse {
+  flex: 2;
+}
+
 .number {
   margin-top: 100px;
 }

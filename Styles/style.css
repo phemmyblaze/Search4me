@@ -20,6 +20,14 @@
     background-color: #274690;
   }
 
+  .navbar-brand {
+    flex: 0.8;
+}
+
+.navbar-collapse {
+    flex: 2;
+}
+
 
 /* BUTTON */
 .btn-1 {

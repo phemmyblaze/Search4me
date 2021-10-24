@@ -12,6 +12,15 @@ html {
     font-size: 14px;
 }
 
+.navbar-brand {
+    flex: 0.8;
+}
+
+.navbar-collapse {
+    flex: 2;
+}
+
+
 .form {
     position: relative
 }
@@ -40,9 +49,9 @@ html {
     background: rgba(239, 235, 235, 0.5);
 }
 
-.form-input:focus {
-    box-shadow: none;
-    border: none;
+
+.search-div img {
+    width: 50px;
 }
 
 .fa-bell {
@@ -236,7 +245,7 @@ border-radius: 20px;
     background: #F8F8F8;
 box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
 border-radius: 8px;
-min-height: 180px;
+min-height: 50px;
 min-width: 50%;
 display: inline-block;
 vertical-align: middle;
@@ -292,13 +301,41 @@ footer {
     background: rgba(214, 242, 255, 0.3);
 }
 
+@media only screen and (max-width: 770px) {
+
+    .search-div {
+        /* margin: 1px; */
+        /* width: 100%; */
+        align-items: center;
+    }
+
+    .search-div i {
+        font-size: 24px;
+    }
+
+    .search-div img {
+        width: 24px;
+    }
+    
+}
+
 @media only screen and (max-width: 450px){
-	.updates-details div, .search-div  {
+	.updates-details div {
         margin: 1px;
         width: 100%;
     }
 
+    
+
     .updates-details div:first-child {
         text-align: center;
+    }
+
+    .img-upload {
+        background: rgba(196, 196, 196, 0.05);
+        border: none;
+        border-radius: 20
+    px
+    ;
     }
 }

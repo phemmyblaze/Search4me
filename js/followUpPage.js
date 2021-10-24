@@ -124,20 +124,20 @@ function displayHTML() {
     html = ""
     updates.forEach( (e, index) => {
         html +=`
-        <div class="p-3 m-3 update-info">
+        <div class="p-1 m-1 p-sm-3 m-sm-3 update-info">
             <div class="d-flex justify-content-between">
                 ${index == 0? "<h5>Latest Update!</h5>": "<h5>Previous Update!</h5>"}
                 <p><button class="edit">Edit</button><button class="delete">Delete</button></p>
             </div>
-            <div class="update-info p-4 inner-box text-center">
+            <div class="update-info p-1 p-sm-4 inner-box text-center">
                 <p>${e.message}</p>
                 ${generateImageURL(e.images)}
             </div>
             <div class="row updates-details">
-                <div class="col-4 p-4">
+                <div class="col-4 p-sm-4 p-1">
                     <img class="" src="./images/police logo.png"/>
                 </div>
-                <div class="col-8 p-4">
+                <div class="col-8 p-sm-4 p-1">
                         <p>Updated by Inspector Buhari Jubril</p>
                         <p>Agency: Nigeria Police Force; Lagos State Police Command.</p>
                         <p>Time: ${e.time}</p>

@@ -34,6 +34,10 @@ body{
   font-size:1.25rem;
 }
 
+a {
+  text-decoration: none;
+}
+
 #page-content-wrapper {
     min-width: 100vw;
   }
